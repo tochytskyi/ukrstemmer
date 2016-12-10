@@ -1,5 +1,5 @@
 {
-    "name": "vendor/ukrstemmer",
+    "name": "tochytskyi/ukrstemmer",
     "description": "Stemmer for Ukrainian language",
     "type": "library",
     "authors": [
