@@ -1,0 +1,12 @@
+{
+    "name": "vendor/ukrstemmer",
+    "description": "Stemmer for Ukrainian language",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Volodymyr Tochytskyi",
+            "email": "v.tochytskyi@gmail.com"
+        }
+    ],
+    "require": {}
+}
