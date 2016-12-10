@@ -8,5 +8,7 @@
             "email": "v.tochytskyi@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^7.0"
+    }
 }
