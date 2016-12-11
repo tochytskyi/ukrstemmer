@@ -11,6 +11,7 @@ class UkrStemmer
 
     /* http://uk.wikipedia.org/wiki/Голосний_звук */
     static $VOWEL = '/аеиоуюяіїє/u';
+    static $INFINITIVE = '/(ти|учи|ячи|вши|ши|ати|яти|ючи|)$/u';
     static $PERFECTIVEGROUND = '/((ив|ивши|ившись))$/u';
     // static $PERFECTIVEGROUND = '/((ив|ивши|ившись|ыв|ывши|ывшись((?<=[ая])(в|вши|вшись)))$/u';
     // http://uk.wikipedia.org/wiki/Рефлексивне_дієслово
@@ -39,6 +40,13 @@ class UkrStemmer
     {
         $stem = mb_strtolower($word);
         do {
+            //check if infinitive
+            $m = preg_replace(self::$INFINITIVE, '', $word);
+            if (strcmp($m, $word) !== 0) {
+                $stem = $word;
+                continue;
+            }
+
             //init
             preg_match_all(self::$RVRE, $stem, $p);
             if (!$p) {
