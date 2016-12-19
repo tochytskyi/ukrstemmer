@@ -80,11 +80,11 @@ class UkrStemmer
             }
 
             //STEP 2
-            $RV = preg_replace('/и$/u', '', $RV);
+            $RV = preg_replace('/і$/u', '', $RV);
 
             //STEP 3
             if (preg_match(self::$DERIVATIONAL, $RV)) {
-                $RV = preg_replace('/ость?$/u', '', $RV);
+                $RV = preg_replace('/ість?$/u', '', $RV);
             }
 
             //STEP 4
